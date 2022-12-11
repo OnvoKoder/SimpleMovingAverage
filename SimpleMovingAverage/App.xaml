@@ -1,0 +1,31 @@
+﻿<Application x:Class="SimpleMovingAverage.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SimpleMovingAverage"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="Border">
+            <Setter Property="CornerRadius" Value="5"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Azure"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style x:Key="WpfPlot">
+            <Setter Property="ItemsControl.Width" Value="350"/>
+            <Setter Property="ItemsControl.Height" Value="150"/>
+        </Style>
+    </Application.Resources>
+</Application>

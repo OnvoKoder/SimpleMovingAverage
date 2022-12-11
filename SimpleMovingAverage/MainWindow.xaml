@@ -1,0 +1,27 @@
+﻿<Window x:Class="SimpleMovingAverage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleMovingAverage"
+        mc:Ignorable="d"
+        Title="Скользящее среднее" MinHeight="450" MinWidth="800" MaxHeight="450" MaxWidth="800" Icon="\Resources\preview.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="LightCyan">
+            <TextBlock Text="Шаг"/>
+            <TextBox MaxLength="3" Width="70" Name="txtStep" PreviewTextInput="txtStep_PreviewTextInput"/>
+            <TextBlock Text="Набор цифр"/>
+            <TextBox Height="100" Name="txtArray" PreviewTextInput="txtArray_PreviewTextInput"/>
+            <Button x:Name="btnSearch" Content="Сформировать" Click="SearchAvg"/>
+            <WpfPlot Visibility="Hidden" Style="{StaticResource WpfPlot}" Name="graph"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Background="LightCyan">
+            <TextBlock Text="Результаты"/>
+            <ListBox Name="lbAvg"/>
+        </StackPanel>
+    </Grid>
+</Window>
